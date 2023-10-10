@@ -1,0 +1,33 @@
+{
+  "name": "pixelord",
+  "description": "Pixelord is a powerful canvas project with high-quality assets & designs",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "welcome-card",
+    "welcome-canvas",
+    "canvas",
+    "pixelord",
+    "rank-card",
+    "discord-canvas"
+  ],
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.44"
+  },
+  "license": "MIT",
+  "author": "FlameFace",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/A3PIRE/pixelord.git"
+  },
+  "bugs": {
+    "url": "https://github.com/A3PIRE/pixelord/issues"
+  }
+}
