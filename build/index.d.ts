@@ -11,9 +11,9 @@ export declare class welcomeCard {
     public setName(name: string): this;
     public setAvatar(image: string): this;
     public setTitle(title: string): this;
-    public setColor(this: string): this;
-    public setMessage(this: string): this;
-    public setBackground(this: string): this;
+    public setColor(color: string): this;
+    public setMessage(message: string): this;
+    public setBackground(background: string): this;
 
     public build(): Promise<Buffer>;
 }
