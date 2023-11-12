@@ -1,28 +1,21 @@
-<div>
-<img src="https://s6.imgcdn.dev/ZFCbv.png">
-<br>
-<br>
-</div>
-
 # **About**
-Pixelord is a powerful canvas project with high-quality design that has awesome canvas like welcomeCard and more in the future.
-
-- Fully Customizable
-- High Quality Assets
-- Dreamlike designs
+**Greetify** is futuristic welcome card canvas library
 
 # **Installation**
 ```
-npm i pixelord
+npm i greetify
 ```
 
 # **Example Usage**
+This example code will create a welcome card and save it as a png.
 ```js
 (async () => {
-    const { welcomeCard } = require("pixelord");
+    // Importing modules
+    const { welcomeCard } = require("greetify");
     const fs = require("fs")
 
-    const welcard = new welcomeCard()
+    // Card details here
+    const card = new welcomeCard()
         .setName("FlameFace")
         .setAvatar("https://s6.imgcdn.dev/ZFQlq.png")
         .setMessage("YOU ARE 688 MEMBER")
@@ -30,11 +23,46 @@ npm i pixelord
         .setColor("00FF38") // without #
         .setTitle("Welcome")
 
-    const output = await welcard.build();
+    // Building process  
+    const output = await card.build();
 
+    // Save as image
     fs.writeFileSync("card.png", output);
     console.log("Done");
 })()
+```
+
+This example is of **Discord Bot** using discord.js
+```js
+// Importing modules
+const { welcomeCard } = require("greetify");
+const { AttachmentBuilder } = require("discord.js")
+
+// Make sure to define client
+client.on('guildMemberAdd', async (member) => {
+    // Card details here
+    const card = new welcomeCard()
+        .setName("FlameFace")
+        .setAvatar("https://s6.imgcdn.dev/ZFQlq.png")
+        .setMessage("YOU ARE 688 MEMBER")
+        .setBackground("https://s6.imgcdn.dev/ZqH2S.png")
+        .setColor("00FF38") // without #
+        .setTitle("Welcome")
+
+    // Building process    
+    const output = await card.build()
+    
+    // Fetch channel from members guild using ID
+    const channel = member.guild.channels.cache.get("0000000000000000000");
+
+    // Sends card to the "channel"
+    await channel.send({
+        files: [{
+            attachment: output,
+            name: `${member.id}.png`
+        }]
+    })
+})
 ```
 
 ### **Output**
@@ -42,6 +70,3 @@ npm i pixelord
 
 # **Help**
 If you need help or want some features to be added, join our official **[A3PIRE](https://discord.gg/qDysF95NWh)** community.
-
-
-**A3PIRE Project 2023**

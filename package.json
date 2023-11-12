@@ -1,6 +1,6 @@
 {
-  "name": "pixelord",
-  "description": "Pixelord is a powerful canvas project with high-quality assets & designs",
+  "name": "greetify",
+  "description": "Greetify is futuristic welcome card canvas library",
   "version": "1.0.0",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -14,20 +14,29 @@
     "welcome-card",
     "welcome-canvas",
     "canvas",
-    "pixelord",
-    "rank-card",
-    "discord-canvas"
+    "greetify",
+    "greeting",
+    "discord-canvas",
+    "discord.js"
   ],
   "dependencies": {
     "@napi-rs/canvas": "^0.1.44"
   },
-  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "typescript": "^5.1.6"
+  },
+  "license": "GPL-3.0",
   "author": "FlameFace",
   "repository": {
     "type": "git",
-    "url": "https://github.com/A3PIRE/pixelord.git"
+    "url": "https://github.com/A3PIRE/greetify.git"
   },
   "bugs": {
-    "url": "https://github.com/A3PIRE/pixelord/issues"
+    "url": "https://github.com/A3PIRE/greetify/issues"
+  },
+  "funding": {
+    "type": "githubsponser",
+    "url": "https://github.com/sponsors/flameface"
   }
 }

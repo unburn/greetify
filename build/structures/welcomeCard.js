@@ -3,8 +3,8 @@ const { createCanvas, loadImage, GlobalFonts } = require("@napi-rs/canvas");
 // GlobalFonts.registerFromPath("build/structures/font/Montserrat-Black.ttf", "montserrat-black")
 // GlobalFonts.registerFromPath("build/structures/font/Montserrat-ExtraLight.ttf", "montserrat-extra-light")
 
-GlobalFonts.registerFromPath("node_modules/pixelord/build/structures/font/Montserrat-Black.ttf", "montserrat-black")
-GlobalFonts.registerFromPath("node_modules/pixelord/build/structures/font/Montserrat-ExtraLight.ttf", "montserrat-extra-light")
+GlobalFonts.registerFromPath("node_modules/greetify/build/structures/font/Montserrat-Black.ttf", "montserrat-black")
+GlobalFonts.registerFromPath("node_modules/greetify/build/structures/font/Montserrat-ExtraLight.ttf", "montserrat-extra-light")
 
 const defaultAssets = {
     background: "https://s6.imgcdn.dev/ZqH2S.png",
