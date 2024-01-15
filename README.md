@@ -69,4 +69,4 @@ client.on('guildMemberAdd', async (member) => {
 ![welcome-preview](https://s6.imgcdn.dev/ZFifB.png)
 
 # **Help**
-If you need help or want some features to be added, join our official **[A3PIRE](https://discord.gg/qDysF95NWh)** community.
+If you need help or want some features to be added, join our official **[burnxpofficial](https://discord.gg/qDysF95NWh)** community.

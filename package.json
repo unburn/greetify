@@ -1,7 +1,7 @@
 {
   "name": "greetify",
   "description": "Greetify is futuristic welcome card canvas library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "files": [
@@ -30,10 +30,10 @@
   "author": "FlameFace",
   "repository": {
     "type": "git",
-    "url": "https://github.com/A3PIRE/greetify.git"
+    "url": "https://github.com/burnxpofficial/greetify.git"
   },
   "bugs": {
-    "url": "https://github.com/A3PIRE/greetify/issues"
+    "url": "https://github.com/burnxpofficial/greetify/issues"
   },
   "funding": {
     "type": "githubsponser",
