@@ -1,14 +1,28 @@
 {
   "name": "greetify",
-  "description": "Greetify is futuristic welcome card canvas library",
-  "version": "1.0.1",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "version": "2.0.0",
+  "description": "Futuristic welcome card canvas library",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
-    "build"
+    "dist",
+    "fonts"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "deploy": "npm publish",
+    "deploy:beta": "npm publish --tag beta",
+    "test:m": "cd tests && node index.mjs",
+    "test:c": "cd tests && node --watch index.js"
   },
   "keywords": [
     "welcome-card",
@@ -19,24 +33,22 @@
     "discord-canvas",
     "discord.js"
   ],
-  "dependencies": {
-    "@napi-rs/canvas": "^0.1.44"
-  },
+  "author": "flameface",
+  "license": "GPL-3.0-only",
   "devDependencies": {
-    "@types/node": "^20.4.5",
-    "typescript": "^5.1.6"
+    "@types/node": "^20.11.28",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2"
   },
-  "license": "GPL-3.0",
-  "author": "FlameFace",
   "repository": {
     "type": "git",
-    "url": "https://github.com/burnxpofficial/greetify.git"
+    "url": "https://github.com/unburn/greetify.git"
   },
   "bugs": {
-    "url": "https://github.com/burnxpofficial/greetify/issues"
+    "url": "https://github.com/unburn/greetify/issues"
   },
-  "funding": {
-    "type": "githubsponser",
-    "url": "https://github.com/sponsors/flameface"
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.51",
+    "cropify": "latest"
   }
 }
