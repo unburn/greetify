@@ -13,7 +13,7 @@ registerFont("PlusJakartaSans-SemiBold.ttf", "pjs-sbold")
 
 const Panorama = async (option: panoramaType) => {
     if (!option.backgroundImage) {
-        option.backgroundImage = "https://ik.imagekit.io/unburn/greeti`fy-default.png"
+        option.backgroundImage = "https://ik.imagekit.io/unburn/greetify-default.png"
     }
 
     if (!option.name) throw new Error("Invalid parameters: missing name paramter")
