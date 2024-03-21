@@ -22,7 +22,7 @@
     "deploy": "npm publish",
     "deploy:beta": "npm publish --tag beta",
     "test:m": "cd tests && node index.mjs",
-    "test:c": "cd tests && node --watch index.js"
+    "test:c": "cd tests && node index.js"
   },
   "keywords": [
     "welcome-card",

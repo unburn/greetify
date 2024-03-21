@@ -3,13 +3,13 @@ import { cropImage } from "cropify"
 import { registerFont } from "../functions/registerFont";
 import { panoramaType } from "../typings/types";
 
-registerFont("PlusJakartaSans-Bold.ttf", "pjs-bold")
-registerFont("PlusJakartaSans-ExtraBold.ttf", "pjs-ebold")
-registerFont("PlusJakartaSans-ExtraLight.ttf", "pjs-elight")
-registerFont("PlusJakartaSans-Light.ttf", "pjs-light")
-registerFont("PlusJakartaSans-Medium.ttf", "pjs-medium")
-registerFont("PlusJakartaSans-Regular.ttf", "pjs-regular")
-registerFont("PlusJakartaSans-SemiBold.ttf", "pjs-sbold")
+registerFont("PlusJakartaSans-Bold.ttf", "bold")
+registerFont("PlusJakartaSans-ExtraBold.ttf", "extrabold")
+registerFont("PlusJakartaSans-ExtraLight.ttf", "extralight")
+registerFont("PlusJakartaSans-Light.ttf", "light")
+registerFont("PlusJakartaSans-Medium.ttf", "medium")
+registerFont("PlusJakartaSans-Regular.ttf", "regular")
+registerFont("PlusJakartaSans-SemiBold.ttf", "semibold")
 
 const Panorama = async (option: panoramaType) => {
     if (!option.backgroundImage) {
@@ -57,11 +57,11 @@ const Panorama = async (option: panoramaType) => {
     ctx.drawImage(await loadImage(avatar), 90, 60)
 
     ctx.fillStyle = option.nameColor
-    ctx.font = "80px pjs-ebold"
+    ctx.font = "80px extrabold"
     ctx.fillText(option.name.toUpperCase(), 420, centerY + 75)
 
     ctx.fillStyle = option.typeColor
-    ctx.font = "65px pjs-light"
+    ctx.font = "65px light"
     ctx.fillText(option.type.toUpperCase(), 420, centerY - 25)
 
     return canvas.toBuffer("image/png")

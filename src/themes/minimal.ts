@@ -3,13 +3,13 @@ import { cropImage } from "cropify"
 import { registerFont } from "../functions/registerFont";
 import { minimalType } from "../typings/types";
 
-registerFont("PlusJakartaSans-Bold.ttf", "pjs-bold")
-registerFont("PlusJakartaSans-ExtraBold.ttf", "pjs-ebold")
-registerFont("PlusJakartaSans-ExtraLight.ttf", "pjs-elight")
-registerFont("PlusJakartaSans-Light.ttf", "pjs-light")
-registerFont("PlusJakartaSans-Medium.ttf", "pjs-medium")
-registerFont("PlusJakartaSans-Regular.ttf", "pjs-regular")
-registerFont("PlusJakartaSans-SemiBold.ttf", "pjs-sbold")
+registerFont("PlusJakartaSans-Bold.ttf", "bold")
+registerFont("PlusJakartaSans-ExtraBold.ttf", "extrabold")
+registerFont("PlusJakartaSans-ExtraLight.ttf", "extralight")
+registerFont("PlusJakartaSans-Light.ttf", "light")
+registerFont("PlusJakartaSans-Medium.ttf", "medium")
+registerFont("PlusJakartaSans-Regular.ttf", "regular")
+registerFont("PlusJakartaSans-SemiBold.ttf", "semibold")
 
 const Minimal = async (option: minimalType) => {
     if (!option.backgroundImage) {
@@ -45,7 +45,7 @@ const Minimal = async (option: minimalType) => {
         imagePath: option.backgroundImage,
         borderRadius: 100,
         cropCenter: true,
-        width: 1280, 
+        width: 1280,
         height: 720
     })
 
@@ -63,17 +63,17 @@ const Minimal = async (option: minimalType) => {
     ctx.drawImage(await loadImage(avatar), 505, 56)
 
     ctx.fillStyle = option.nameColor
-    ctx.font = "100px pjs-ebold"
+    ctx.font = "100px extrabold"
     ctx.textAlign = 'center';
     ctx.fillText(option.name.toUpperCase(), centerX, 440)
 
     ctx.fillStyle = option.typeColor
-    ctx.font = "65px pjs-bold"
+    ctx.font = "65px bold"
     ctx.textAlign = 'center';
     ctx.fillText(option.type.toUpperCase(), centerX, 530)
 
     ctx.fillStyle = option.messageColor
-    ctx.font = "40px pjs-light"
+    ctx.font = "40px light"
     ctx.textAlign = 'center';
     ctx.fillText(option.message.toUpperCase(), centerX, 655)
 
